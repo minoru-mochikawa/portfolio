@@ -1,8 +1,160 @@
 <!DOCTYPE html>
-<html>
-  <head>
-  </head>
-  <body>
-    <p>Hello world</p>
-  </body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minoru's Portfolio</title>
+    <link rel="stylesheet" href="/files/css/reset.min.css">
+    <link rel="stylesheet" href="/files/css/style.css">
+    <link rel="stylesheet" media="screen" href="/files/css/b1njTimeline.css">
+    <link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>Minoru Mochikawa Portfolio</h1>
+            <img src="/files/img/header.jpeg" alt="ヘッダ画像" class="hero">
+        </div>
+    </header>
+
+
+
+    <nav>
+        <ul>
+            <li><a href="#profile"><i class="far fa-id-card"></i>自己紹介</a></li>
+            <li><a href="#skill"><i class="far fa-lightbulb"></i>スキル</a></li>
+            <li><a href="#works"><i class="fas fa-laptop-house"></i>これまでの作品</a></li>
+        </ul>
+    </nav>
+    <div id="profile" class="container">
+        <h1>自己紹介</h1>
+        <div class="timeline__container">
+            <ol id="timeline">
+                <li>
+                    <time datetime="1993-09-24">1993年9月24日</time>
+                    <p>私が生まれた年です。</p>
+                    <div class="description">
+                        <ul>
+                            <li>名古屋市の病院で生まれました。</li>
+                            <li>その年は冷夏だったそうです。</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <time datetime="1994-10">October 1994</time>
+                    <p>私が生まれた年です。</p>
+                    <div class="description">
+                        <ul>
+                            <li>名古屋市の病院で生まれました。</li>
+                            <li>その年は冷夏だったそうです。</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <time datetime="2001-09-11">Septembre 11 2001</time>
+                    <p>World Trade Center</p>
+                </li>
+                <li>
+                    <time datetime="2003">2003</time>
+                    <p>My adolescent crisis</p>
+                </li>
+                <li>
+                    <time datetime="2005-08">August 2005</time>
+                    <p>Fun under the sun</p>
+                </li>
+                <li>
+                    <time datetime="2009-06-19">June 19 2009</time>
+                    <p>I miss homework...not!</p>
+                </li>
+                <li>
+                    <time datetime="2010-06-22">June 22 2010</time>
+                    <p>I have my degree!</p>
+                </li>
+                <li>
+                    <time datetime="2010-08-16">August 2010</time>
+                    <p>That's it, I'm finally a man.</p>
+                </li>
+                <li>
+                    <time datetime="2012-01-11">January 11 2012</time>
+                    <p>Signing unemployment checks</p>
+                </li>
+                <li>
+                    <time datetime="2013-03">Mars 2013</time>
+                    <p>My first job</p>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div id="skill" class="container">
+        <h1>スキル</h1>
+        <div class="skill__container">
+            <ul class="skill__list">
+                <li class="skill__item first">
+                    <div>
+                        <a href="">
+                            <img src="/files/img/HTML5_Logo_256.png" alt="HTML5_Logo_256">
+                            <div>
+                                <h2>HTML</h2>
+                                <p>使用歴は2年ほどです。</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="skill__item">
+                    <div>
+                        <a href="">
+                            <dl>
+                                <dt></dt>
+                                <dd></dd>
+                            </dl>
+                        </a>
+                    </div>
+                </li>
+                <li class="skill__item last">
+                    <div>
+                        <a href="">
+                            <dl>
+                                <dt></dt>
+                                <dd></dd>
+                            </dl>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="work" class="container">
+        <h1>これまでの作品</h1>
+        <div class="work__container">
+            <ul class="work__list">
+                <li class="work__item">
+                    <div>
+                        <a href="">
+                            <img src="/files/img/work1.PNG" alt="ポートフォリオサイトのスクショ">
+                            <p>これまでの経歴や技術を紹介するために解説したページです。</p>
+                        </a>
+                    </div>
+                </li>
+                <li class="work__item">
+                </li>
+                <li class="work__item">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="/files/js/jquery-3.6.0.min.js"></script>
+    <script src="/files/js/moment.min.js"></script>
+    <script src="/files/js/jquery.b1njTimeline.js"></script>
+    <script>
+        $(function() {
+            $('#timeline').b1njTimeline({
+                'height': 600
+            });
+        });
+    </script>
+</body>
+
 </html>
