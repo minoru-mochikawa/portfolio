@@ -6,17 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minoru's Portfolio</title>
-    <link rel="stylesheet" href="/files/css/reset.min.css">
-    <link rel="stylesheet" href="/files/css/style.css">
-    <link rel="stylesheet" media="screen" href="/files/css/b1njTimeline.css">
+    <link rel="stylesheet" href="files/css/reset.min.css">
+    <link rel="stylesheet" href="files/css/style.css">
+    <link rel="stylesheet" media="screen" href="files/css/b1njTimeline.css">
     <link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet">
+    <script src="files/js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="files/js/slick_control.js"></script>
 </head>
 
 <body>
     <header>
         <div>
             <h1>Minoru Mochikawa Portfolio</h1>
-            <img src="/files/img/header.jpeg" alt="ヘッダ画像" class="hero">
+            <img src="files/img/header.jpeg" alt="ヘッダ画像" class="hero">
         </div>
     </header>
 
@@ -95,7 +99,7 @@
                 <li class="skill__item first">
                     <div>
                         <a href="">
-                            <img src="/files/img/HTML5_Logo_256.png" alt="HTML5_Logo_256">
+                            <img src="files/img/HTML5_Logo_256.png" alt="HTML5_Logo_256">
                             <div>
                                 <h2>HTML</h2>
                                 <p>使用歴は2年ほどです。</p>
@@ -129,11 +133,11 @@
     <div id="work" class="container">
         <h1>これまでの作品</h1>
         <div class="work__container">
-            <ul class="work__list">
+            <ul class="work__list slider">
                 <li class="work__item">
                     <div>
                         <a href="">
-                            <img src="/files/img/work1.PNG" alt="ポートフォリオサイトのスクショ">
+                            <img src="files/img/work1.PNG" alt="ポートフォリオサイトのスクショ">
                             <p>これまでの経歴や技術を紹介するために解説したページです。</p>
                         </a>
                     </div>
@@ -142,12 +146,17 @@
                 </li>
                 <li class="work__item">
                 </li>
+                <li class="work__item">
+                </li>
+                <li class="work__item">
+                </li>
+                <li class="work__item">
+                </li>
             </ul>
         </div>
     </div>
-    <script src="/files/js/jquery-3.6.0.min.js"></script>
-    <script src="/files/js/moment.min.js"></script>
-    <script src="/files/js/jquery.b1njTimeline.js"></script>
+    <script src="files/js/moment.min.js"></script>
+    <script src="files/js/jquery.b1njTimeline.js"></script>
     <script>
         $(function() {
             $('#timeline').b1njTimeline({
