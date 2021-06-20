@@ -116,6 +116,7 @@ p {
 .skill__container {
     clear: left;
     margin-bottom: 64px;
+    padding: 16px;
 }
 
 .work__container {
@@ -287,6 +288,9 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active) {
     nav ul {
         padding: 8px;
     }
+    div.bhoechie-tab-container {
+        margin: 0;
+    }
 }
 
 
@@ -329,5 +333,11 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active) {
     }
     nav ul {
         padding: 8px;
+    }
+    div.bhoechie-tab-container {
+        margin: 0;
+    }
+    .bhoechie-tab-content.active h1 {
+        font-size: 8em;
     }
 }
