@@ -7,13 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minoru's Portfolio</title>
     <link rel="stylesheet" href="files/css/reset.min.css">
-    <link rel="stylesheet" href="files/css/style.css">
     <link rel="stylesheet" media="screen" href="files/css/b1njTimeline.css">
     <link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="files/css/timeline.css">
     <script src="files/js/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script type="text/javascript" src="files/js/slick_control.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="files/css/style.css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="files/js/skill_control.js"></script>
 </head>
 
 <body>
@@ -34,105 +35,240 @@
         </ul>
     </nav>
     <div id="profile" class="container">
-        <h1>自己紹介</h1>
+        <h1 class="title">自己紹介</h1>
         <div class="timeline__container">
-            <ol id="timeline">
+            <ul class="timeline">
                 <li>
-                    <time datetime="1993-09-24">1993年9月24日</time>
-                    <p>私が生まれた年です。</p>
-                    <div class="description">
-                        <ul>
-                            <li>名古屋市の病院で生まれました。</li>
-                            <li>その年は冷夏だったそうです。</li>
-                        </ul>
+                    <div class="timeline-badge"><i class="fas fa-baby"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">私が生まれた年</h4>
+                            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>1993年9月24日</small></p>
+                        </div>
+                        <div class="timeline-body">
+                            <p>愛知県で生まれました。</p>
+                        </div>
                     </div>
                 </li>
                 <li>
-                    <time datetime="1994-10">October 1994</time>
-                    <p>私が生まれた年です。</p>
-                    <div class="description">
-                        <ul>
-                            <li>名古屋市の病院で生まれました。</li>
-                            <li>その年は冷夏だったそうです。</li>
-                        </ul>
+                    <div class="timeline-badge" style="background-color: aqua;"><i class="fas fa-school"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">高専に入学</h4>
+                            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>2009年4月</small></p>
+                        </div>
+                        <div class="timeline-body">
+                            <p>高専に入学しました。2年次には情報工学科に進学しました。</p>
+                        </div>
                     </div>
                 </li>
                 <li>
-                    <time datetime="2001-09-11">Septembre 11 2001</time>
-                    <p>World Trade Center</p>
+                    <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis
+                                quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis
+                                quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                        </div>
+                    </div>
                 </li>
                 <li>
-                    <time datetime="2003">2003</time>
-                    <p>My adolescent crisis</p>
-                </li>
-                <li>
-                    <time datetime="2005-08">August 2005</time>
-                    <p>Fun under the sun</p>
-                </li>
-                <li>
-                    <time datetime="2009-06-19">June 19 2009</time>
-                    <p>I miss homework...not!</p>
-                </li>
-                <li>
-                    <time datetime="2010-06-22">June 22 2010</time>
-                    <p>I have my degree!</p>
-                </li>
-                <li>
-                    <time datetime="2010-08-16">August 2010</time>
-                    <p>That's it, I'm finally a man.</p>
-                </li>
-                <li>
-                    <time datetime="2012-01-11">January 11 2012</time>
-                    <p>Signing unemployment checks</p>
-                </li>
-                <li>
-                    <time datetime="2013-03">Mars 2013</time>
-                    <p>My first job</p>
-                </li>
-            </ol>
-        </div>
-    </div>
-    <div id="skill" class="container">
-        <h1>スキル</h1>
-        <div class="skill__container">
-            <ul class="skill__list">
-                <li class="skill__item first">
-                    <div>
-                        <a href="">
-                            <img src="files/img/HTML5_Logo_256.png" alt="HTML5_Logo_256">
-                            <div>
-                                <h2>HTML</h2>
-                                <p>使用歴は2年ほどです。</p>
+                    <div class="timeline-badge info"><i class="glyphicon glyphicon-floppy-disk"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis
+                                quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                            <hr>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                                    <i class="glyphicon glyphicon-cog"></i> <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </li>
-                <li class="skill__item">
-                    <div>
-                        <a href="">
-                            <dl>
-                                <dt></dt>
-                                <dd></dd>
-                            </dl>
-                        </a>
+                <li>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis
+                                quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                        </div>
                     </div>
                 </li>
-                <li class="skill__item last">
-                    <div>
-                        <a href="">
-                            <dl>
-                                <dt></dt>
-                                <dd></dd>
-                            </dl>
-                        </a>
+                <li class="timeline-inverted">
+                    <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis
+                                quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                        </div>
                     </div>
                 </li>
             </ul>
         </div>
     </div>
-    <div id="work" class="container">
-        <h1>これまでの作品</h1>
-        <div class="work__container">
+    <div id="skill" class="container">
+        <h1 class="title">スキル</h1>
+        <div class="skill__container row">
+            <div class="col-lg-5 col-md-5 col-sm-8 col-xs-9 bhoechie-tab-container">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 bhoechie-tab-menu">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item active text-center">
+                            <h4 class="glyphicon glyphicon-plane"></h4><br />Flight
+                        </a>
+                        <a href="#" class="list-group-item text-center">
+                            <h4 class="glyphicon glyphicon-road"></h4><br />Train
+                        </a>
+                        <a href="#" class="list-group-item text-center">
+                            <h4 class="glyphicon glyphicon-home"></h4><br />Hotel
+                        </a>
+                        <a href="#" class="list-group-item text-center">
+                            <h4 class="glyphicon glyphicon-cutlery"></h4><br />Restaurant
+                        </a>
+                        <a href="#" class="list-group-item text-center">
+                            <h4 class="glyphicon glyphicon-credit-card"></h4><br />Credit Card
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 bhoechie-tab">
+                    <!-- flight section -->
+                    <div class="bhoechie-tab-content active">
+                        <center>
+                            <h1 class="glyphicon glyphicon-plane" style="font-size:14em;color:#55518a"></h1>
+                            <h2 style="margin-top: 0;color:#55518a">Cooming Soon</h2>
+                            <h3 style="margin-top: 0;color:#55518a">Flight Reservation</h3>
+                        </center>
+                    </div>
+                    <!-- train section -->
+                    <div class="bhoechie-tab-content">
+                        <center>
+                            <h1 class="glyphicon glyphicon-road" style="font-size:12em;color:#55518a"></h1>
+                            <h2 style="margin-top: 0;color:#55518a">Cooming Soon</h2>
+                            <h3 style="margin-top: 0;color:#55518a">Train Reservation</h3>
+                        </center>
+                    </div>
+
+                    <!-- hotel search -->
+                    <div class="bhoechie-tab-content">
+                        <center>
+                            <h1 class="glyphicon glyphicon-home" style="font-size:12em;color:#55518a"></h1>
+                            <h2 style="margin-top: 0;color:#55518a">Cooming Soon</h2>
+                            <h3 style="margin-top: 0;color:#55518a">Hotel Directory</h3>
+                        </center>
+                    </div>
+                    <div class="bhoechie-tab-content">
+                        <center>
+                            <h1 class="glyphicon glyphicon-cutlery" style="font-size:12em;color:#55518a"></h1>
+                            <h2 style="margin-top: 0;color:#55518a">Cooming Soon</h2>
+                            <h3 style="margin-top: 0;color:#55518a">Restaurant Diirectory</h3>
+                        </center>
+                    </div>
+                    <div class="bhoechie-tab-content">
+                        <center>
+                            <h1 class="glyphicon glyphicon-credit-card" style="font-size:12em;color:#55518a"></h1>
+                            <h2 style="margin-top: 0;color:#55518a">Cooming Soon</h2>
+                            <h3 style="margin-top: 0;color:#55518a">Credit Card</h3>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="works" class="container">
+        <h1 class="title">これまでの作品</h1>
+        <div class="row work__container">
+            <div class="col-md-12">
+                <div id="Carousel" class="carousel slide">
+
+                    <ol class="carousel-indicators">
+                        <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#Carousel" data-slide-to="1"></li>
+                        <li data-target="#Carousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+
+                        <div class="item active">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <a href="#" class="thumbnail"><img src="files/img/work1.PNG" alt="ポートフォリオサイトのスクショ">
+                                        <p>これまでの経歴や技術を紹介するために解説したページです。</p>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#" class="thumbnail"><img src="files/img/work1.PNG" alt="ポートフォリオサイトのスクショ">
+                                        <p>これまでの経歴や技術を紹介するために解説したページです。</p>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#" class="thumbnail"><img src="files/img/work1.PNG" alt="ポートフォリオサイトのスクショ">
+                                        <p>これまでの経歴や技術を紹介するために解説したページです。</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--.row-->
+                        </div>
+                        <!--.item-->
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <a href="#" class="thumbnail"><img src="files/img/work1.PNG" alt="ポートフォリオサイトのスクショ">
+                                        <p>あああ</p>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#" class="thumbnail"><img src="files/img/work1.PNG" alt="ポートフォリオサイトのスクショ">
+                                        <p>いいい</p>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#" class="thumbnail"><img src="files/img/work1.PNG" alt="ポートフォリオサイトのスクショ">
+                                        <p>ううう</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--.row-->
+                        </div>
+                    </div>
+                    <!--.carousel-inner-->
+                    <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
+                    <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
+                </div>
+                <!--.Carousel-->
+
+            </div>
+        </div>
+        <div class="">
             <ul class="work__list slider">
                 <li class="work__item">
                     <div>
@@ -155,15 +291,6 @@
             </ul>
         </div>
     </div>
-    <script src="files/js/moment.min.js"></script>
-    <script src="files/js/jquery.b1njTimeline.js"></script>
-    <script>
-        $(function() {
-            $('#timeline').b1njTimeline({
-                'height': 600
-            });
-        });
-    </script>
 </body>
 
 </html>
