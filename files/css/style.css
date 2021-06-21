@@ -102,26 +102,28 @@ p {
     display: block;
 }
 
-.timeline__container {
+.timeline__container,
+.skill__container,
+.work__container {
     clear: left;
     margin: 64px;
     padding: 32px;
     width: 80%;
+}
+
+.timeline__container {
     background-color: #fff;
     border-radius: 16px;
     border: 1px solid #e6e6e6;
     box-shadow: 0 2px 6px rgb(0 0 0 / 15%);
+    border-radius: 16px;
 }
 
-.skill__container {
-    clear: left;
-    margin-bottom: 64px;
-    padding: 16px;
-}
-
-.work__container {
-    margin: 64px;
-    width: 100%;
+.thumbnail p {
+    text-align: left;
+    width: 80%;
+    padding: 8px;
+    margin: auto;
 }
 
 
@@ -156,11 +158,13 @@ div.bhoechie-tab-menu div.list-group {
 
 div.bhoechie-tab-menu div.list-group>a {
     margin-bottom: 0;
+    text-align: center;
+    padding: 8px;
 }
 
 div.bhoechie-tab-menu div.list-group>a .glyphicon,
 div.bhoechie-tab-menu div.list-group>a .fa {
-    color: #5A55A3;
+    color: #007FC3;
 }
 
 div.bhoechie-tab-menu div.list-group>a:first-child {
@@ -176,8 +180,8 @@ div.bhoechie-tab-menu div.list-group>a:last-child {
 div.bhoechie-tab-menu div.list-group>a.active,
 div.bhoechie-tab-menu div.list-group>a.active .glyphicon,
 div.bhoechie-tab-menu div.list-group>a.active .fa {
-    background-color: #5A55A3;
-    background-image: #5A55A3;
+    background-color: #007FC3;
+    background-image: #007FC3;
     color: #ffffff;
 }
 
@@ -190,7 +194,7 @@ div.bhoechie-tab-menu div.list-group>a.active:after {
     border-left: 0;
     border-bottom: 13px solid transparent;
     border-top: 13px solid transparent;
-    border-left: 10px solid #5A55A3;
+    border-left: 10px solid #007FC3;
 }
 
 div.bhoechie-tab-content {
@@ -198,10 +202,17 @@ div.bhoechie-tab-content {
     /* border: 1px solid #eeeeee; */
     padding-left: 20px;
     padding-top: 10px;
+    vertical-align: middle;
+    margin: 24px 16px;
 }
 
 div.bhoechie-tab div.bhoechie-tab-content:not(.active) {
     display: none;
+}
+
+div.bhoechie-tab-content h2,
+div.bhoechie-tab-content h3 {
+    margin-top: 32px;
 }
 
 .carousel {
