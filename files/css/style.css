@@ -334,7 +334,6 @@ div.bhoechie-tab-content h3 {
         margin: auto;
     }
     .container {
-        margin: 16px;
         padding: 16px;
         width: 90%;
     }
@@ -342,7 +341,6 @@ div.bhoechie-tab-content h3 {
     .skill__container,
     .work__container {
         margin: auto;
-        padding: 8px;
         width: 100%;
         border-radius: 8px;
     }
