@@ -62,10 +62,44 @@ p {
     padding: 40px;
 }
 
+.burger-wrapper {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0px;
+    padding: 8px 16px 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--back);
+    z-index: 100;
+    border-bottom: 2px solid var(--mainblue);
+}
+
+.noscroll .burger-wrapper {
+    background-color: var(--mainblue);
+    opacity: 0.7;
+}
+
+.noscroll .burger-wrapper h1 {
+    color: var(--textwhite);
+}
+
+.burger-wrapper h1 {
+    display: inline-block;
+    color: var(--text);
+    z-index: 5;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: justify;
+    line-height: 1;
+}
+
 .burger-btn {
     position: fixed;
-    top: 16px;
     right: 16px;
+    height: 24px;
+    width: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,7 +112,7 @@ p {
 .bar {
     background-color: var(--text);
     display: block;
-    width: 16px;
+    width: 24px;
     height: 2px;
     border-radius: 3px;
     position: absolute;
@@ -89,8 +123,14 @@ p {
     display: none;
 }
 
+.close {
+    opacity: 1;
+    z-index: 120;
+}
+
 .close .bar {
-    width: 20px;
+    background-color: var(--text);
+    width: 32px;
 }
 
 .bar_top {
@@ -99,12 +139,12 @@ p {
 }
 
 .close .bar_top {
-    top: 6px;
+    top: 8px;
     transform: rotate(45deg);
 }
 
 .bar_mid {
-    top: 6px;
+    top: 8px;
     right: 0;
 }
 
@@ -113,32 +153,28 @@ p {
 }
 
 .bar_bottom {
-    top: 12px;
+    top: 16px;
     right: 0;
 }
 
 .close .bar_bottom {
-    top: 6px;
+    top: 8px;
     transform: rotate(-45deg);
 }
 
-#header-wraper {
+#header-wrapper {
     position: relative;
     width: 100%;
     height: 100%;
+    margin: 0;
 }
 
-.header h1 {
-    display: block;
-    color: var(--text);
+.gap {
     position: absolute;
-    top: -24px;
-    left: -16px;
-    z-index: 5;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: justify;
-    line-height: 1;
+    top: 30px;
+    height: 16px;
+    width: 100%;
+    background-color: var(--back);
 }
 
 .profileimg {
@@ -166,7 +202,6 @@ p {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: var(--mainblue);
     color: #fff;
     font-weight: bold;
     font-size: 32px;
@@ -175,8 +210,9 @@ p {
 }
 
 .noscroll .nav-wrapper {
+    background-color: var(--mainblue);
     opacity: 0.7;
-    z-index: 105;
+    z-index: 55;
 }
 
 .nav-wrapper li {
@@ -415,8 +451,38 @@ div.bhoechie-tab-content h3 {
         font-size: 40px;
         top: -56px;
     }
+    .gap {
+        top: 68px;
+        height: 32px;
+        width: 100%;
+        background-color: var(--back);
+    }
+    .burger-btn {
+        width: 100px;
+        height: 100px;
+    }
     .bar {
-        width: 24px;
+        width: 100px;
+    }
+    .close .bar {
+        width: 100px;
+        right: 50px;
+    }
+    .bar_top {
+        top: 16px;
+    }
+    .close .bar_top {
+        top: 40px;
+    }
+    .bar_mid {
+        top: 40px;
+    }
+    .bar_bottom {
+        top: 64px;
+        right: 0;
+    }
+    .close .bar_bottom {
+        top: 40px;
     }
     .nav-link {
         margin: 32px;
@@ -437,19 +503,12 @@ div.bhoechie-tab-content h3 {
 
 /* タブレット */
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 768px) {
     h1,
     h2,
     .nav-wrapper {
         font-size: 16px;
         margin-bottom: 16px;
-    }
-    header h1 {
-        font-size: 32px;
-        top: 16px;
-        left: 0;
-        right: 0;
-        margin: auto;
     }
     .container {
         padding: 16px;
