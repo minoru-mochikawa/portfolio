@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="jp">
 
 <head>
     <meta charset="UTF-8">
@@ -14,25 +14,30 @@
     <script src="files/js/jquery-3.6.0.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <script src="files/js/skill_control.js"></script>
+    <script src="files/js/burger_control.js"></script>
 </head>
 
 <body>
-    <header>
-        <div>
-            <h1>Minoru Mochikawa Portfolio</h1>
-            <div class="hero"></div>
+    <header class="header">
+        <div id="header-wraper">
+            <h1>Minoru<br>Mochikawa</h1>
+            <img src="/files/img/profile_white.jpg" alt="プロフィール写真" class="profileimg">
+            <button class="burger-btn">
+                <span class="bar bar_top"></span>
+                <span class="bar bar_mid"></span>
+                <span class="bar bar_bottom"></span>
+            </button>
+            <nav class="nav-wrapper fade">
+                <ul>
+                    <li class="nav-link"><a href="#profile"><i class="far fa-id-card"></i>自己紹介</a></li>
+                    <li class="nav-link"><a href="#skill"><i class="far fa-lightbulb"></i>スキル</a></li>
+                    <li class="nav-link"><a href="#works"><i class="fas fa-laptop-house"></i>これまでの作品</a></li>
+                </ul>
+            </nav>
         </div>
+
     </header>
 
-
-
-    <nav>
-        <ul>
-            <li><a href="#profile"><i class="far fa-id-card"></i>自己紹介</a></li>
-            <li><a href="#skill"><i class="far fa-lightbulb"></i>スキル</a></li>
-            <li><a href="#works"><i class="fas fa-laptop-house"></i>これまでの作品</a></li>
-        </ul>
-    </nav>
     <div id="profile" class="container">
         <h1 class="title">自己紹介</h1>
         <div class="timeline__container">
@@ -278,6 +283,17 @@
             </div>
         </div>
     </div>
+    <footer class="footer">
+        <div class="footer-profile-wrapper">
+            <img src="/files/img/profile.jpg" alt="">
+            <p>Webエンジニア歴3年目です。今後もWeb制作にかかわる仕事をしたいです。</p>
+        </div>
+        <ul>
+            <li class="nav-link"><a href="#profile"><i class="far fa-id-card"></i>自己紹介</a></li>
+            <li class="nav-link"><a href="#skill"><i class="far fa-lightbulb"></i>スキル</a></li>
+            <li class="nav-link"><a href="#works"><i class="fas fa-laptop-house"></i>これまでの作品</a></li>
+        </ul>
+    </footer>
 </body>
 
 </html>

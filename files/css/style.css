@@ -1,10 +1,19 @@
+:root {
+    --text: #444444;
+    --textwhite: #FFFFFF;
+    --mainblue: #007FC3;
+    --back: #F2FCFF;
+    --change: 0.5s ease-in-out;
+}
+
 body {
-    background: #F2FCFF;
+    background: var(--back);
     font-family: "メイリオ", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", sans-serif;
-    color: rgb(0, 0, 0);
+    color: var(--text);
     font-size: 16px;
     width: 100%;
     height: 100%;
+    animation: fade 2s ease-in-out 1s backwards;
 }
 
 ul,
@@ -15,7 +24,7 @@ ol {
 }
 
 a {
-    color: #fff;
+    color: var(--textwhite);
     text-decoration: none;
 }
 
@@ -24,58 +33,10 @@ a.selected {
     text-shadow: #000 1px 1px 2px;
 }
 
-header div {
-    position: relative;
-}
-
-header h1 {
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    z-index: 5;
-    font-size: 120px;
-    font-weight: bold;
-}
-
-.hero {
-    background-image: url("../img/ねこ_横長.jpg");
-    width: 100%;
-    height: 40vw;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: 0;
-}
-
-nav {
-    height: 40%;
-    width: 100%;
-    padding: 16px;
-    background-color: #007FC3;
-    color: #fff;
-    font-weight: bold;
-    font-size: 32px;
-}
-
-nav ul {
-    text-decoration: none;
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-nav li {
-    margin: auto;
-}
-
-nav i {
-    margin-right: 8px;
-}
-
 h1,
 h2 {
     text-align: center;
-    color: #ccc;
+    color: var(--text);
     margin-bottom: 32px;
 }
 
@@ -88,9 +49,146 @@ h2 {
 }
 
 p {
-    font-size: 24px;
+    font-size: 16px;
     color: #000;
 }
+
+
+/* ヘッダー */
+
+.header {
+    width: 100vw;
+    height: 100vh;
+    padding: 40px;
+}
+
+.burger-btn {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 110;
+    background-color: var(--back);
+    border: none;
+    flex-direction: column;
+}
+
+.bar {
+    background-color: var(--text);
+    display: block;
+    width: 16px;
+    height: 2px;
+    border-radius: 3px;
+    position: absolute;
+    transition: var(--change);
+}
+
+.fade {
+    display: none;
+}
+
+.close .bar {
+    width: 20px;
+}
+
+.bar_top {
+    top: 0;
+    right: 0;
+}
+
+.close .bar_top {
+    top: 6px;
+    transform: rotate(45deg);
+}
+
+.bar_mid {
+    top: 6px;
+    right: 0;
+}
+
+.close .bar_mid {
+    display: none;
+}
+
+.bar_bottom {
+    top: 12px;
+    right: 0;
+}
+
+.close .bar_bottom {
+    top: 6px;
+    transform: rotate(-45deg);
+}
+
+#header-wraper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.header h1 {
+    display: block;
+    color: var(--text);
+    position: absolute;
+    top: -24px;
+    left: -16px;
+    z-index: 5;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: justify;
+    line-height: 1;
+}
+
+.profileimg {
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.noscroll {
+    overflow: hidden;
+}
+
+.nav-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--mainblue);
+    color: #fff;
+    font-weight: bold;
+    font-size: 32px;
+    transition: var(--change);
+    padding: 50% 0 50% 25%;
+}
+
+.noscroll .nav-wrapper {
+    opacity: 0.7;
+    z-index: 105;
+}
+
+.nav-wrapper li {
+    margin-bottom: 16px;
+}
+
+.nav-wrapper i {
+    margin-right: 8px;
+}
+
+
+/* 年表 */
 
 .first {
     border-radius: 16px 16px 0 0;
@@ -170,7 +268,7 @@ div.bhoechie-tab-menu div.list-group>a {
 
 div.bhoechie-tab-menu div.list-group>a .glyphicon,
 div.bhoechie-tab-menu div.list-group>a .fa {
-    color: #007FC3;
+    color: var(--mainblue);
 }
 
 div.bhoechie-tab-menu div.list-group>a:first-child {
@@ -186,8 +284,8 @@ div.bhoechie-tab-menu div.list-group>a:last-child {
 div.bhoechie-tab-menu div.list-group>a.active,
 div.bhoechie-tab-menu div.list-group>a.active .glyphicon,
 div.bhoechie-tab-menu div.list-group>a.active .fa {
-    background-color: #007FC3;
-    background-image: #007FC3;
+    background-color: var(--mainblue);
+    background-image: var(--mainblue);
     color: #ffffff;
 }
 
@@ -200,7 +298,7 @@ div.bhoechie-tab-menu div.list-group>a.active:after {
     border-left: 0;
     border-bottom: 13px solid transparent;
     border-top: 13px solid transparent;
-    border-left: 10px solid #007FC3;
+    border-left: 10px solid var(--mainblue);
 }
 
 div.bhoechie-tab-content {
@@ -264,55 +362,75 @@ div.bhoechie-tab-content h3 {
     background: #428bca;
 }
 
+.footer {
+    background-color: var(--mainblue);
+    padding: 16px;
+    text-align: left;
+}
 
-/* スマートフォン */
+.footer .footer-profile-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 16px;
+}
 
-@media only screen and (max-width: 599px) {
-    h1,
-    h2,
-    nav {
-        font-size: 16px;
-        margin-bottom: 16px;
-    }
+.footer .footer-profile-wrapper img {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+
+.footer .footer-profile-wrapper p {
+    color: var(--textwhite);
+}
+
+.footer ul {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    text-justify: inter-ideograph;
+}
+
+.footer .nav-link {
+    text-decoration: underline;
+    margin-bottom: 8px;
+}
+
+.nav-link i {
+    width: 16px;
+    margin-right: 16px;
+}
+
+
+/* PC */
+
+@media only screen and (min-width: 1024px) {
     p {
-        font-size: 16px;
+        font-size: 24px;
     }
-    header h1 {
+    .header h1 {
+        font-size: 40px;
+        top: -56px;
+    }
+    .bar {
+        width: 24px;
+    }
+    .nav-link {
+        margin: 32px;
+    }
+    .nav-link i {
         font-size: 32px;
-        top: 16px;
-        left: 0;
-        right: 0;
-        margin: auto;
+        width: 32px;
+        margin-right: 32px;
     }
-    .container {
-        margin: 16px;
-        padding: 16px;
-        width: 90%;
+    .nav-wrapper {
+        padding: 25%;
     }
-    .timeline__container,
-    .skill__container,
-    .work__container {
-        margin: auto;
-        padding: 8px;
-        width: 100%;
-        border-radius: 8px;
-    }
-    nav {
-        padding: 8px;
-    }
-    nav a {
-        display: flex;
-        text-align: center;
-        flex-direction: column;
-    }
-    nav ul {
-        padding: 8px;
-    }
-    nav ul li a i {
-        margin-bottom: 8px;
-    }
-    div.bhoechie-tab-container {
-        margin: 0;
+    .footer {
+        padding: 32px;
     }
 }
 
@@ -322,7 +440,7 @@ div.bhoechie-tab-content h3 {
 @media only screen and (max-width: 1024px) {
     h1,
     h2,
-    nav {
+    .nav-wrapper {
         font-size: 16px;
         margin-bottom: 16px;
     }
@@ -343,17 +461,6 @@ div.bhoechie-tab-content h3 {
         margin: auto;
         width: 100%;
         border-radius: 8px;
-    }
-    nav {
-        padding: 8px;
-    }
-    nav a {
-        display: flex;
-        text-align: center;
-        flex-direction: column;
-    }
-    nav ul {
-        padding: 8px;
     }
     div.bhoechie-tab-container {
         margin: 0;
