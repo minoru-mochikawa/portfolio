@@ -181,6 +181,7 @@ p {
     height: 100%;
     object-fit: cover;
     z-index: 0;
+    margin: 0 auto;
 }
 
 @keyframes fade {
@@ -438,6 +439,10 @@ div.bhoechie-tab-content h3 {
 .nav-link i {
     width: 16px;
     margin-right: 16px;
+}
+
+.work__container #Carousel {
+    height: 40vh;
 }
 
 
